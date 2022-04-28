@@ -1,0 +1,8 @@
+0) props object vs params list
+props not required = defaultProps
+
+1) install modern-normalize
+2) not classic css vs BEM
+3) modules styles vs BEM
+4) sass modules
+5) styles-component
