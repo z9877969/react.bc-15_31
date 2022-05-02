@@ -1,0 +1,24 @@
+@import "../../assets/styles/mixins.scss";
+
+.container {
+  @include container;
+  border: 1px solid green;
+}
+
+.green {
+  background-color: green;
+}
+
+.default {
+  background-color: white;
+}
+
+.products {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  // width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
