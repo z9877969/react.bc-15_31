@@ -6,14 +6,15 @@ import { getNewsApi } from "../../utils/newsApi";
 
 class News extends Component {
   state = {
-    news: [],
+    news: [], // [...]
+    // page: 0, // 3
     page: 1,
     totalNews: 0,
     isLoading: false,
     error: null,
   };
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.query !== this.props.query) {
       //   this.getNews();
       this.setState({ news: [], page: 1 });
@@ -28,25 +29,15 @@ class News extends Component {
         this.getNews();
       }
     }
-
-    if (prevState.news !== this.state.news && prevState.news.length > 0) {
-      // window.scrollTo({
-      //   top: snapshot - (55 + 20 + 70),
-      //   behavior: "smooth",
-      // });
-      // console.log("window.innerHeight :>> ", window.innerHeight);
-      window.scrollBy({
-        top: window.innerHeight - 55,
-        left: 0,
-        behavior: "smooth",
-      });
-    }
   }
 
-  getSnapshotBeforeUpdate() {
-    const scrollHeight = document.body.scrollHeight;
-    return scrollHeight;
-  }
+  //   getNews = () => {
+  //     this.setState({ isLoading: true });
+  //     getNewsApi({ q: this.props.query, page: this.state.page })
+  //       .then((news) => this.setState({ news }))
+  //       .catch((error) => this.setState({ error }))
+  //       .finally(() => this.setState({ isLoading: false }));
+  //   };
 
   getNews = () => {
     this.setState({ isLoading: true, error: null });
@@ -66,7 +57,7 @@ class News extends Component {
   };
 
   render() {
-    const { news, isLoading, error, totalNews, status } = this.state;
+    const { news, isLoading, error, totalNews } = this.state;
     const { toggleModal } = this.props;
     return (
       <>
@@ -78,22 +69,6 @@ class News extends Component {
         {error && <h2>{error.message}</h2>}
       </>
     );
-    // switch (status) {
-    //   case "idle":
-    //     return <h1>Base content for user</h1>;
-    //   case "reject":
-    //     return <h1>{error.message}</h1>;
-    //   default:
-    //     return (
-    //       <>
-    //         {status === "pending" && <h1>Loading...</h1>}
-    //         <NewsList news={news} openModal={toggleModal} />
-    //         {news.length > 0 && news.length < totalNews && (
-    //           <Button handleMoreNews={this.handleMoreNews} />
-    //         )}
-    //       </>
-    //     );
-    // }
   }
 }
 

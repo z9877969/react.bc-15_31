@@ -11,7 +11,7 @@ export const getNewsApi = ({ q, page }) => {
     q,
     page,
     apiKey: API_KEY,
-    pageSize: 10,
+    pageSize: 6,
   };
   return axios
     .get()
