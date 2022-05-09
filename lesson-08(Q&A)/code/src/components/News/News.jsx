@@ -1,7 +1,9 @@
+import { Component } from "react";
+import { Audio } from "react-loader-spinner";
 import Button from "../Button/Button";
 import NewsList from "../NewsList/NewsList";
 // import news from "../../data/news.json";
-import { Component } from "react";
+
 import { getNewsApi } from "../../utils/newsApi";
 
 class News extends Component {
@@ -70,7 +72,21 @@ class News extends Component {
     const { toggleModal } = this.props;
     return (
       <>
-        {isLoading && <p>Loading...</p>}
+        {isLoading && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0",
+              width: "100vw",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Audio />
+          </div>
+        )}
         <NewsList news={news} openModal={toggleModal} />
         {news.length > 0 && news.length < totalNews && (
           <Button handleMoreNews={this.handleMoreNews} />
