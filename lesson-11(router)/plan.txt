@@ -1,0 +1,11 @@
+1) Counter -> useState
+2) Todo -> useState, useEffect
+3) TodoItem -> cwu useEffect(return)
+4) useLocalStorage, useForm
+
+4) useContext - todoItem (lang)
+5) TodoItem with btnStop -> setInterval = useRef
+6) Todo -> useRef -> (scrollIntoView)
+7) TodoForm -> memo
+8) Todo -> useMemo/filteredList/
+9) useCallback
