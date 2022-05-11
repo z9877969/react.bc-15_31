@@ -26,8 +26,10 @@ export const NavStyled = styled.nav`
 
 export const NavLinkStyled = styled.a`
   padding: 8px 15px;
-  font-size: 22px;
   border: 1px solid red;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 22px;
 `;
 
 export const UserInfoWrapperStyled = styled.div`

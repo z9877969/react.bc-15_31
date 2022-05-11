@@ -1,11 +1,12 @@
-1) Counter -> useState
-2) Todo -> useState, useEffect
-3) TodoItem -> cwu useEffect(return)
-4) useLocalStorage, useForm
+-строка запроса
+-RouterProvider
+-history + router
 
-4) useContext - todoItem (lang)
-5) TodoItem with btnStop -> setInterval = useRef
-6) Todo -> useRef -> (scrollIntoView)
-7) TodoForm -> memo
-8) Todo -> useMemo/filteredList/
-9) useCallback
+-/counter
+-/todo
+-/news - линки на переключение языков // ua, us, ru, pl,
+-/news/:lang - маршрут со списком новостей для выбранной страны 
+    (страница с заголовком обозначающим страну и со списом новостей(title, link) и пагинатором)
+    Ukrainian news, US news, Rusian news, Polish news
+-/news/:newsTitle - страница с описанием одного айтема получаемая данные 
+-/news/:lang?page=1 + пагинатор(если успеем)
