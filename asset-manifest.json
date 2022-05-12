@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/react.bc-15_31/static/css/main.6dc459db.css",
-    "main.js": "/react.bc-15_31/static/js/main.bcb68777.js",
+    "main.css": "/react.bc-15_31/static/css/main.d9c85a48.css",
+    "main.js": "/react.bc-15_31/static/js/main.e92d1659.js",
+    "counter-page.css": "/react.bc-15_31/static/css/counter-page.1b7c9968.chunk.css",
+    "counter-page.js": "/react.bc-15_31/static/js/counter-page.2bf4fa7f.chunk.js",
+    "news-page.js": "/react.bc-15_31/static/js/news-page.198a6d97.chunk.js",
+    "newsList-page.css": "/react.bc-15_31/static/css/newsList-page.aa732b59.chunk.css",
+    "newsList-page.js": "/react.bc-15_31/static/js/newsList-page.0c038f19.chunk.js",
+    "searchedNews-page.css": "/react.bc-15_31/static/css/searchedNews-page.4fc7c6cc.chunk.css",
+    "searchedNews-page.js": "/react.bc-15_31/static/js/searchedNews-page.6fb73862.chunk.js",
+    "static/js/569.54f18301.chunk.js": "/react.bc-15_31/static/js/569.54f18301.chunk.js",
     "static/media/logo.png": "/react.bc-15_31/static/media/logo.97fbc9d5392a24af576f.png",
-    "static/media/sprite.svg": "/react.bc-15_31/static/media/sprite.272871fdcf859f69407a7cbcc8ac9540.svg",
     "index.html": "/react.bc-15_31/index.html",
-    "main.6dc459db.css.map": "/react.bc-15_31/static/css/main.6dc459db.css.map",
-    "main.bcb68777.js.map": "/react.bc-15_31/static/js/main.bcb68777.js.map"
+    "main.d9c85a48.css.map": "/react.bc-15_31/static/css/main.d9c85a48.css.map",
+    "main.e92d1659.js.map": "/react.bc-15_31/static/js/main.e92d1659.js.map",
+    "counter-page.1b7c9968.chunk.css.map": "/react.bc-15_31/static/css/counter-page.1b7c9968.chunk.css.map",
+    "counter-page.2bf4fa7f.chunk.js.map": "/react.bc-15_31/static/js/counter-page.2bf4fa7f.chunk.js.map",
+    "news-page.198a6d97.chunk.js.map": "/react.bc-15_31/static/js/news-page.198a6d97.chunk.js.map",
+    "newsList-page.aa732b59.chunk.css.map": "/react.bc-15_31/static/css/newsList-page.aa732b59.chunk.css.map",
+    "newsList-page.0c038f19.chunk.js.map": "/react.bc-15_31/static/js/newsList-page.0c038f19.chunk.js.map",
+    "searchedNews-page.4fc7c6cc.chunk.css.map": "/react.bc-15_31/static/css/searchedNews-page.4fc7c6cc.chunk.css.map",
+    "searchedNews-page.6fb73862.chunk.js.map": "/react.bc-15_31/static/js/searchedNews-page.6fb73862.chunk.js.map",
+    "569.54f18301.chunk.js.map": "/react.bc-15_31/static/js/569.54f18301.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dc459db.css",
-    "static/js/main.bcb68777.js"
+    "static/css/main.d9c85a48.css",
+    "static/js/main.e92d1659.js"
   ]
 }
