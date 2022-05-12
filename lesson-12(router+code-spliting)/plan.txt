@@ -1,0 +1,6 @@
+-NavLink -> styled-component
+-Outlet with Header
+-goBack with state
+-redirect
+-Suspence, lazy()
+-chunks

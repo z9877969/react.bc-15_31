@@ -1,0 +1,18 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.scss";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  // <React.StrictMode>
+  <BrowserRouter basename="/react.bc-15_31/">
+    <App />
+  </BrowserRouter>
+  // </React.StrictMode>
+);
+
+// console.log("window.history :>> ", window.history);
+// console.log("window.location :>> ", window.location);
