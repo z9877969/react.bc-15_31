@@ -12,7 +12,6 @@ const linkStyles = { padding: "10px", border: "1px solid blue" };
 
 const NewsCountryNav = () => {
   const location = useLocation();
-  console.log("location :>> ", location);
   return (
     <nav style={stylesNav}>
       <Link style={linkStyles} to="/news-list/ru" state={location}>
