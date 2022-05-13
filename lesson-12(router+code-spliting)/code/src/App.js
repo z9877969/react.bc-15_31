@@ -1,12 +1,7 @@
-// import { useEffect } from "react";
 import { lazy, Suspense } from "react";
-import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import "./App.scss";
-// import CounterPage from "./pages/CounterPage";
-// import NewsPage from "./pages/NewsPage";
-// import NewsListPage from "./pages/NewsListPage";
-// import SearchedNews from "./components/SearchedNews/SearchedNews";
 
 const CounterPage = lazy(() =>
   import("./pages/CounterPage" /* webpackChunkName: "counter-page" */)
@@ -33,11 +28,6 @@ const MainWrapper = () => {
     </>
   );
 };
-
-// const Fn = ({ to }) => {
-//   fetch("http://server/error/path")
-//   return <Navigate to={to} />;
-// };
 
 const App = () => {
   return (
