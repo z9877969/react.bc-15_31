@@ -6,7 +6,7 @@ import s from "./TodoList.module.scss";
 const ToDoList = () => {
   // const todos = useSelector((state) => state.todos.items);
   // const filter = useSelector((state) => state.todos.filter);
-  const { filter, todos } = useSelector((state) => state.todos);
+  const { filter, items: todos } = useSelector((state) => state.todos);
 
   const filteredTodos = useMemo(() => {
     if (filter === "all") return todos;
