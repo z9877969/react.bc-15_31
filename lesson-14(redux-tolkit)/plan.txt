@@ -1,0 +1,8 @@
+0. uni redux -> i toolkit -> npm start (toolkit is wrapper of redux)
+1. configureStore
+    -reducer
+    -devtools
+2. createReducer
+3. createAction
+4. persist
+5. createSlice
