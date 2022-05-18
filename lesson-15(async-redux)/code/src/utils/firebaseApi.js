@@ -14,16 +14,8 @@ export const addTodoApi = (todo) => {
 
 export const getTodosApi = () => {
   return axios.get("/todos.json").then(({ data }) => transformObjectData(data));
-  // [[key, value], [key, value]]
 };
 
 export const removeTodoApi = (id) => {
   return axios.delete("/todos/" + id + ".json").then(() => id);
 };
-
-// {
-//     "title": "Title",
-//     "descr": "Ahoy!",
-//     "status": "low",
-//     id: "-N2LAElNd4RHIW9jUaaj"
-// }
