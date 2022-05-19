@@ -4,7 +4,7 @@ export const getFilterTodo = (state) => state.todos.filter;
 export const getTodos = (state) => state.todos.items;
 
 // export const getFilteredTodos = (state) => {
-//   console.log("getFilteredTodos");
+//   console.log("getFilteredTodos", state);
 //   const todos = getTodos(state);
 //   const filter = getFilterTodo(state);
 //   if (filter === "all") return todos;

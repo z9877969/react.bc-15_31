@@ -1,8 +1,7 @@
-import { lazy, Suspense, useCallback, useEffect } from "react";
-import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import "./App.scss";
-import { useDispatch, useSelector } from "react-redux";
 import Error from "./components/Error/Error";
 
 const CounterPage = lazy(() =>
@@ -24,12 +23,9 @@ const SearchedNews = lazy(() =>
 );
 
 const MainWrapper = () => {
-  // const isLoading = useSelector((state) => state.isLoading);
-
   return (
     <>
       <Header />
-      {/* {isLoading && <h1>Loading...</h1>} */}
       <Suspense fallback={<h1>Loading...</h1>}>
         <Outlet />
       </Suspense>
