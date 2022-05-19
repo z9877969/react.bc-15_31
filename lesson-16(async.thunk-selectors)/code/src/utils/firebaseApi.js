@@ -17,5 +17,5 @@ export const getTodosApi = () => {
 };
 
 export const removeTodoApi = (id) => {
-  return axios.delete("/todos/" + id + ".jso");
+  return axios.delete("/todos/" + id + ".json");
 };
