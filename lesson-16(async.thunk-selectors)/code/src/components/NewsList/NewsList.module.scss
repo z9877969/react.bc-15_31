@@ -1,0 +1,25 @@
+.news {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.item {
+  margin: 0;
+  padding: 5px 0;
+  text-align: left;
+  color: #212121;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.title {
+  margin: 0;
+}
