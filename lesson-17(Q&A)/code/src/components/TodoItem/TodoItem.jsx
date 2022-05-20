@@ -1,14 +1,22 @@
-import { useDispatch } from "react-redux";
-// import { removeTodo } from "../../redux/todos/todosActions";
-// import { removeTodo } from "../../redux/todos/todosSlice";
-import { removeTodo } from "../../redux/todos/todosOperations";
+// import { useDispatch } from "react-redux";
+// import { removeTodo } from "../../redux/todos/todosOperations";
 import sprite from "../../assets/icons/sprite.svg";
 import s from "./TodoItem.module.scss";
+import { useMutation, useQueryClient } from "react-query";
+import { removeTodoApi } from "../../utils/firebaseApi";
 
 const ToDoItem = ({ title, descr, id, date, status }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const queryClient = useQueryClient();
 
-  const removeItem = () => dispatch(removeTodo(id));
+  const mutation = useMutation(removeTodoApi, {
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries("todos");
+    },
+  });
+
+  const removeItem = () => mutation.mutate(id);
 
   return (
     <li className={s.toDoItem}>

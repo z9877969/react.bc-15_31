@@ -1,21 +1,23 @@
-import { useSelector } from "react-redux";
-import {
-  getFilteredTodos,
-  getFilterTodo,
-  getTodos,
-} from "../../redux/todos/todosSelectors";
+import { useQuery, useQueryClient } from "react-query";
+// import { useSelector } from "react-redux";
+// import { getFilteredTodos } from "../../redux/todos/todosSelectors";
+import { getTodosApi } from "../../utils/firebaseApi";
 import ToDoItem from "../TodoItem/TodoItem";
 import s from "./TodoList.module.scss";
 
 const ToDoList = () => {
-  const filteredTodos = useSelector(getFilteredTodos);
+  // const filteredTodos = useSelector(getFilteredTodos);
+  // const queryClient = useQueryClient();
 
-  console.log("TodoList");
+  const query = useQuery("todos", getTodosApi);
+  const todos = query.data || [];
+
+  // console.log("TodoList");
 
   return (
     <>
       <ul className={s.container}>
-        {filteredTodos.map((todo) => (
+        {todos.map((todo) => (
           <ToDoItem key={todo.id} {...todo} />
         ))}
       </ul>

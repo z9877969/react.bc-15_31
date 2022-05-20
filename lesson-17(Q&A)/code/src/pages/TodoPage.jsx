@@ -1,27 +1,29 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import TodoFilter from "../components/TodoFilter/TodoFilter";
 import ToDoForm from "../components/ToDoForm/ToDoForm";
 import ToDoList from "../components/ToDoList/ToDoList";
-import { incrementAction } from "../redux/counter/counterActions";
-import { getTodos } from "../redux/todos/todosOperations";
+// import { incrementAction } from "../redux/counter/counterActions";
+// import { getTodos } from "../redux/todos/todosOperations";
+// import { getTodos, postTodo } from '../my-api'
 
 const TodoPage = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const isLoading = useSelector((state) => state.todos.isLoading);
+ 
+  
+  // useEffect(() => {
+  //   console.log("TodoPage_useEffect");
+  //   dispatch(getTodos());
+  // }, []);
 
-  useEffect(() => {
-    console.log("TodoPage_useEffect");
-    dispatch(getTodos());
-  }, []);
-
-  console.log("TodoPage");
+  // console.log("TodoPage");
 
   return (
     <>
-      <button type="button" onClick={() => dispatch(incrementAction(10))}>
+      {/* <button type="button" onClick={() => dispatch(incrementAction(10))}>
         increment
-      </button>
+      </button> */}
       {/* {isLoading && <h1>Loading...</h1>} */}
       <ToDoForm />
       <TodoFilter />

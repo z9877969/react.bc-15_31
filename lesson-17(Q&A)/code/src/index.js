@@ -6,6 +6,7 @@ import "./index.scss";
 import App from "./App";
 import { store } from "./redux/store";
 import ErrorWrapper from "./components/ErrorWrapper/ErrorWrapper";
+import TodosQueryProvider from "./context/TodosQueryProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -13,9 +14,11 @@ root.render(
   // <React.StrictMode>
   <Provider store={store}>
     <BrowserRouter>
-      <ErrorWrapper>
-        <App />
-      </ErrorWrapper>
+      <TodosQueryProvider>
+        <ErrorWrapper>
+          <App />
+        </ErrorWrapper>
+      </TodosQueryProvider>
     </BrowserRouter>
   </Provider>
   // </React.StrictMode>

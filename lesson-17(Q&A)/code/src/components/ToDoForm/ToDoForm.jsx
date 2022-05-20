@@ -1,12 +1,23 @@
 import { memo } from "react";
-import { useDispatch } from "react-redux";
-import { generate } from "shortid";
+// import { useDispatch } from "react-redux";
 import { useForm } from "../../hooks/useForm";
 import { priorityOptions as statusOpts } from "../../data/priorityOptions";
 import s from "./ToDoForm.module.scss";
-import { addTodo } from "../../redux/todos/todosOperations";
+// import { addTodo } from "../../redux/todos/todosOperations";
+import { useMutation, useQueryClient } from "react-query";
+import { addTodoApi } from "../../utils/firebaseApi";
+
 const ToDoForm = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation(addTodoApi, {
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries("todos");
+    },
+  });
 
   const { form, handleChange, handleSubmit } = useForm({
     initialValues: {
@@ -16,7 +27,8 @@ const ToDoForm = () => {
       status: "",
     },
     cbOnSubmit: (formValues) => {
-      dispatch(addTodo(formValues));
+      // dispatch(addTodo(formValues));
+      mutation.mutate(formValues);
     },
   });
   const { date, title, descr, status } = form;

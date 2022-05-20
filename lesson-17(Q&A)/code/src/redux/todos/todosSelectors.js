@@ -5,6 +5,7 @@ export const getTodos = (state) => state.todos.items;
 
 // export const getFilteredTodos = (state) => {
 //   console.log("getFilteredTodos", state);
+//   // console.log("getFilteredTodos");
 //   const todos = getTodos(state);
 //   const filter = getFilterTodo(state);
 //   if (filter === "all") return todos;
@@ -14,7 +15,7 @@ export const getTodos = (state) => state.todos.items;
 export const getFilteredTodos = createSelector(
   [getFilterTodo, getTodos],
   (filter, todos) => {
-    console.log("getFilteredTodos_memo");
+    // console.log("getFilteredTodos_memo", todos);
     if (filter === "all") return todos;
     return todos.filter((todo) => todo.status === filter);
   }
