@@ -1,0 +1,22 @@
+1. client - server
+2. token,
+3. register/login user
+4. get data for auth user 
+5. logout
+
+rules for fireBaseDb
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth !== null && auth.uid === $uid",
+        ".write": "auth !== null && auth.uid === $uid"
+      }
+    }
+  }
+}
+
+for HomeWork
+https://connections-api.herokuapp.com/users/signup 
+
+axios.defaults.headers.common['Authorization'] = "Bearer AUTH_TOKEN";
