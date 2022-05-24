@@ -1,0 +1,14 @@
+1. restricted-routes
+2. AuthPage refactoring with Form
+2. error handler
+
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth !== null && auth.uid === $uid",
+        ".write": "auth !== null && auth.uid === $uid"
+      }
+    }
+  }
+}
